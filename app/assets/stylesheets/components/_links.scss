@@ -1,0 +1,10 @@
+a {
+  color: $or-taa;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $gray;
+  border-bottom: 2px solid $gray;
+  text-decoration: none;
+}
