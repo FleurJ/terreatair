@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Créer un nouveau contenu</h1>
+  <%= simple_form_form @content, url: contents_path do |c| %>
+  <%= a.input :title, label: 'Titre' %>
+  <%= a.input :status, label: 'Statut', collection: ['draft', 'published', 'archived'], default:'draft' %>
+  <%= a.input :teaser, label: 'Teaser' %>
+  <%= a.input :body, label:'Corps de texte' %>
+  <%= a.input :links, label: 'Liens' %>
+  <%= a.submit "Créer" %>
+</div>
