@@ -3,6 +3,7 @@ class ContentsController < ApplicationController
   end
 
   def index
+    authorize @content
     @contents = Content.all.sort_by(&:created_at).reverse!
   end
 
@@ -11,6 +12,7 @@ class ContentsController < ApplicationController
   end
 
   def create
+    authorize @content
     @content = Content.new(content.params)
     @content.save
     redirect_to content_path
@@ -28,6 +30,7 @@ class ContentsController < ApplicationController
     @content.destroy
     redirect_to tags_path
   end
+
 
   private
 
