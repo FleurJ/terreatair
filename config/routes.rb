@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     # [...]
   end
 
+  resources :contents
   resources :users
+
 end
