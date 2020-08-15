@@ -1,11 +1,12 @@
 class ContentsController < ApplicationController
-
   def show
+    @content = Content.friendly.find(params[:id])
+    authorize @content
   end
 
   def index
-    authorize @content
     @contents = Content.all.sort_by(&:created_at).reverse!
+    authorize @content
   end
 
   def new
@@ -15,9 +16,11 @@ class ContentsController < ApplicationController
 
   def create
     @content = Content.new(content_params)
+    @content.user = current_user
     @content.save
-    redirect_to root_path
     authorize @content
+
+    redirect_to content_path(@content)
   end
 
   def edit
@@ -25,17 +28,16 @@ class ContentsController < ApplicationController
 
   def update
     @content.update(content_params)
-    redirect_to content_path
+    redirect_to content_path(@content)
   end
 
   def destroy
     @content.destroy
-    redirect_to tags_path
   end
 
   private
 
   def content_params
-    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image)
+    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :tags)
   end
 end

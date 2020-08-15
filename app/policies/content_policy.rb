@@ -5,10 +5,14 @@ class ContentPolicy < ApplicationPolicy
     end
   end
   def create?
-    return true
+    user.admin == true
   end
 
   def new?
     user.admin == true
+  end
+
+  def show?
+    return true
   end
 end

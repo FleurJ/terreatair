@@ -12,4 +12,7 @@ class Content < ApplicationRecord
                                                   message: "%{value} n'est pas un statut valide" }
   validates :tags, presence: true, inclusion: { in: ALLOWED_TAGS,
                                                 message: "%{value n'est pas un statut valide" }
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end
