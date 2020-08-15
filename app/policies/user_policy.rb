@@ -12,4 +12,8 @@ class UserPolicy < ApplicationPolicy
   def show?
     user.admin == true
   end
+
+  def delete?
+    user.admin == true
+  end
 end
