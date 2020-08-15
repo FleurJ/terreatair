@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+
   def show
   end
 
@@ -13,10 +14,10 @@ class ContentsController < ApplicationController
   end
 
   def create
-    authorize @content
-    @content = Content.new(content.params)
+    @content = Content.new(content_params)
     @content.save
-    redirect_to content_path
+    redirect_to root_path
+    authorize @content
   end
 
   def edit
@@ -32,10 +33,9 @@ class ContentsController < ApplicationController
     redirect_to tags_path
   end
 
-
   private
 
   def content_params
-    params.require(:content).permit(:title, :status, :teaser, :body, :links)
+    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image)
   end
 end
