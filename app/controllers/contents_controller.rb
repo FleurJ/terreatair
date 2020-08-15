@@ -20,7 +20,7 @@ class ContentsController < ApplicationController
     @content.save
     authorize @content
 
-    redirect_to content_path
+    redirect_to content_path(@content)
   end
 
   def edit
@@ -28,7 +28,7 @@ class ContentsController < ApplicationController
 
   def update
     @content.update(content_params)
-    redirect_to content_path
+    redirect_to content_path(@content)
   end
 
   def destroy
