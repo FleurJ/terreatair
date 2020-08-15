@@ -1,10 +1,14 @@
 <div class="container">
   <h1><%= @content.title %></h1>
+  <p><%= @content.status %></p>
   <p><%= cl_image_tag @content.image.key %></p>
   <p><%= @content.teaser %></p>
   <p><%= @content.body %></p>
   <p><%= @content.links %></p>
   <p>Ecrit par <i><%= @content.user.firstname %></i>, le <%= @content.created_at %></p>
+    <div class="row">
+   <p><%= link_to "Modifier", edit_content_path(@content.id), class:"btn btn-primary" %></p>
+  </div>
 </div>
 
 
