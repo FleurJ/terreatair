@@ -71,8 +71,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+#add by Fleur
 gem 'pundit'
 gem 'devise-i18n', '~> 1.2'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'globalize', '~> 5.3.0'
 gem 'friendly_id', '~> 5.2.4'
+gem 'cloudinary', '~> 1.12.0'
