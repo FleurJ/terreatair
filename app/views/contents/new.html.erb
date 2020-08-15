@@ -9,6 +9,7 @@
   <%= c.input :tags, label: 'Tags', collection: ['home', 'blog', 'unreferenced'] %>
   <%= c.input :image, as: :file, label: 'Image' %>
   <%= c.input :order, as: :integer, label: "Ordre en page d'accueil" %>
+  <%= c.input :menu_title, label: 'Titre de menu' %>
   <%= c.submit "Créer" %>
   <% end %>
 </div>

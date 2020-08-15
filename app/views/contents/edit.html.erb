@@ -10,6 +10,8 @@
     <%= c.input :links, label: 'Liens' %>
     <%= c.input :tags, label: 'Tags', collection: ['home', 'blog', 'unreferenced'] %>
     <%= c.input :image, as: :file, label: 'Image' %>
+    <%= c.input :order, as: :integer, label: "Ordre en page d'accueil" %>
+    <%= c.input :menu_title, label: 'Titre de menu' %>
     <div class="row article-actions">
       <%= submit_tag "Enregistrer le brouillon", class: "btn btn-primary btn-blue-border", id: "save_draft" %> &nbsp;
       <%= submit_tag "Enregistrer et publier", class: "btn btn-primary", id: "save_published" %>
