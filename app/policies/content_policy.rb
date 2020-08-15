@@ -15,4 +15,13 @@ class ContentPolicy < ApplicationPolicy
   def show?
     return true
   end
+
+  def edit?
+    user.admin == true
+  end
+
+  def update?
+    user.admin == true
+
+  end
 end

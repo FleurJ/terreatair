@@ -24,14 +24,19 @@ class ContentsController < ApplicationController
   end
 
   def edit
+    @content = Content.find(params[:id])
+    authorize @content
   end
 
   def update
+    @content = Content.find(params[:id])
     @content.update(content_params)
+    authorize @content
     redirect_to content_path(@content)
   end
 
   def destroy
+    @content = Content.find(params[:id])
     @content.destroy
   end
 

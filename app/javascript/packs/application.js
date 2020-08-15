@@ -36,12 +36,15 @@ document.addEventListener('turbolinks:load', () => {
 
 //sweetalert
 
-import { initSweetalert } from '../plugins/init_sweetalert';
+//import { initSweetalert } from '../plugins/init_sweetalert';
 
-initSweetalert('#sweet-alert-t@a', {
-  title: "A nice alert",
-  text: "This is a great alert, isn't it?",
-  icon: "success"
-}, (value) => {
-  console.log(value);
-});
+//  title: "A nice alert",
+  //text: "This is a great alert, isn't it?",
+  //icon: "success"
+//, (value) => {
+  //console.log(value);
+//});
+
+//'save as'content buttons
+import { functionBtnDraft } from "./button.js";
+functionBtnDraft();

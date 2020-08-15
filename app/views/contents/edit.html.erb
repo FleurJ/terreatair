@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Modifier : <i><%= @content.title %></i></h1>
+  <%= simple_form_for @content, url: content_path, method: :patch do |c| %>
+    <%= c.input :title, label: 'Titre' %>
+    <div class="hidden-field">
+      <%= c.input :status, label: 'Statut', collection: ['draft', 'published', 'archived'], id: 'status', default:'draft' %>
+    </div>
+    <%= c.input :teaser, label: 'Teaser' %>
+    <%= c.input :body, label:'Corps de texte' %>
+    <%= c.input :links, label: 'Liens' %>
+    <%= c.input :tags, label: 'Tags', collection: ['home', 'blog', 'unreferenced'] %>
+    <%= c.input :image, as: :file, label: 'Image' %>
+    <div class="row article-actions">
+      <%= submit_tag "Enregistrer le brouillon", class: "btn btn-primary btn-blue-border", id: "save_draft" %> &nbsp;
+      <%= submit_tag "Enregistrer et publier", class: "btn btn-primary", id: "save_published" %>
+    </div>
+  <% end %>
+</div>
+<script src="application.js"></script>
