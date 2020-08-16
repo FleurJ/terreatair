@@ -1,5 +1,11 @@
 <% @contents.each do |c| %>
   <div class="homediv">
     <h1><%= c.title %></h1>
+    <div class="home-img">
+      <%= cl_image_tag c.image.key %>
+    </div>
+    <p class="home">
+      <%= c.teaser %> &nbqp; <%= link_to "+", content_path(c.id), class:"lire-plus" %>
+    </p>
   </div>
 <% end %>
