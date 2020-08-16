@@ -4,11 +4,6 @@ class ContentsController < ApplicationController
     authorize @content
   end
 
-  def index
-    @contents = Content.all.sort_by(&:created_at).reverse!
-    authorize @content
-  end
-
   def new
     @content = Content.new
     authorize @content
@@ -38,6 +33,10 @@ class ContentsController < ApplicationController
   def destroy
     @content = Content.find(params[:id])
     @content.destroy
+  end
+
+  def index
+    @contents = policy_scope(Content).where(status: "published", tags:'home')
   end
 
   private

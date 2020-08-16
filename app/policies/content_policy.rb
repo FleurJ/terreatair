@@ -22,6 +22,9 @@ class ContentPolicy < ApplicationPolicy
 
   def update?
     user.admin == true
+  end
 
+  def home?
+    return true
   end
 end
