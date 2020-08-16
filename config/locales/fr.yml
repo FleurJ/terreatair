@@ -4,3 +4,6 @@ fr:
   fr: "FR"
   nl: "NL"
   email: "email"
+  home:
+    login: "Se connecter"
+    logout: "Quitter"
