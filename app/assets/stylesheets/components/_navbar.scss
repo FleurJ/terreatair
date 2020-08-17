@@ -26,4 +26,18 @@
 .nav-taa {
   margin-bottom: 1.2em;
   padding-bottom: 8px;
+  font-family: 'Amatic sc';
+  font-weight: 700;
+  font-size: 1.4em;
 }
+
+.nav-taa a {
+  border-bottom: 2px solid #fff;
+  letter-spacing: 3px;
+}
+
+.nav-taa a:hover {
+  border-bottom: 2px solid $gray;
+  color: $gray;
+}
+
