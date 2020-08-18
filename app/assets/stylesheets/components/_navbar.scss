@@ -31,13 +31,19 @@
   font-size: 1.4em;
 }
 
+.nav-fill .nav-taa {
+  position: fixed;
+  top: 0px;
+}
+
 .nav-taa a {
   border-bottom: 2px solid #fff;
   letter-spacing: 3px;
 }
 
-.nav-taa a:hover {
+.nav-taa a:hover, a:active {
   border-bottom: 2px solid $gray;
   color: $gray;
+
 }
 
