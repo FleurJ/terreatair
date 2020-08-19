@@ -17,6 +17,11 @@
   width: 500px;
 }
 
+.img-hexagone img {
+  width: 500px;
+  width: 500px;
+}
+
 .img-custom {
   width: 500px;
   width: 500px;
@@ -24,9 +29,10 @@
 
 .img-custom img {
   object-fit: cover;
-  filter: grayscale(1);
-  height: 500px;
-  width: 500px;
+  height: 480px;
+  width: 480px;
 }
 
-
+.grayscale {
+  filter: grayscale(1);
+}

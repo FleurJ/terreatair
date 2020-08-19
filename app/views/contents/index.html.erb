@@ -12,9 +12,11 @@
       </div>
       <div class="col-6 img-parent">
         <div class="img-custom">
-          <%= cl_image_tag c.image.key %>
-          <div class="img-hexagone"><%= image_url("masque-hexagone.png") %></div>
+          <div class="grayscale">
+            <%= cl_image_tag c.image.key %>
+          </div>
         </div>
+          <div class="img-hexagone"><img src="<%= image_url("masque-hexagone.png") %>"></div>
       </div>
     </div>
   </div>
