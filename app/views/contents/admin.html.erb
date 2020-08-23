@@ -21,7 +21,9 @@
         <% end %>
       </div>
       <div class="col-1">
-        <%= link_to "Supprimer", "#" %>
+        <%= link_to edit_content_path(c.id), title:"Supprimer" do %>
+          <i class="fas fa-trash-alt fa-fw"></i>
+        <% end %>
       </div>
       </div>
     <% end %>
