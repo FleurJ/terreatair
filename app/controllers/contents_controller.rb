@@ -39,6 +39,12 @@ class ContentsController < ApplicationController
     @contents = policy_scope(Content).where(status: "published", tags: 'home').order(:order)
   end
 
+  def admin
+    @content = Content.all
+
+    authorize @content
+  end
+
   private
 
   def content_params

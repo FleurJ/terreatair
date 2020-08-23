@@ -4,6 +4,11 @@ class ContentPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def admin?
+     user.admin == true
+  end
+
   def create?
     user.admin == true
   end
