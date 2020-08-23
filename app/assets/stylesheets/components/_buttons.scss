@@ -1,5 +1,19 @@
 .btn-round {
   border-radius: 50%;
-  margin-left: 4px;
+  margin-left: 1.5rem;
   font-size: 1.6em;
+}
+
+.btn-locale {
+  text-transform: uppercase;
+}
+
+.btn-outline-secondary {
+  color: #777;
+  border-color: #777;
+}
+
+.btn-outline-secondary:hover {
+  background-color: $or-taa;
+  border-color: $or-taa;
 }

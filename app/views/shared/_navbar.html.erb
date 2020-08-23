@@ -1,15 +1,15 @@
 <div class="shape-divider">
 <div class="container">
   <div class="nav nav-fill nav-taa">
-    <%= link_to "Projet", "#6", class: "nav-item nav-link" %>
-    <%= link_to "Animations", "#", class: "nav-item nav-link" %>
-    <%= link_to "Parrainage", "#", class: "nav-item nav-link" %>
-    <%= link_to "Volontariat", "#", class: "nav-item nav-link" %>
-    <%= link_to "Entreprises", "#", class: "nav-item nav-link" %>
-    <%= link_to "Produits", "#", class: "nav-item nav-link" %>
-    <%= link_to "Galerie", "#", class: "nav-item nav-link" %>
-    <%= link_to "Bien-être", "#", class: "nav-item nav-link" %>
-    <%= link_to "Contact", "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.poject'), "#6", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.animations'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.sponsorship'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.volunteering'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.companies'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.products'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.health'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.gallery'), "#", class: "nav-item nav-link" %>
+    <%= link_to I18n.t('home.contact'), "#", class: "nav-item nav-link" %>
   </div>
 </div>
 </div>
@@ -26,15 +26,22 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="btn btn-outline-secondary btn-round btn-locale" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Langue">
+            <%= I18n.locale %>
+          </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "FR", "/fr", class: "nav-link" %>
               <%= link_to "NL", "/nl", class: "nav-link" %>
               <%= link_to "EN", "/en", class: "nav-link" %>
+            </div>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item">
           </li>
           <li class="nav-item dropdown">
-            <a class="btn btn-primary btn-round" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="I18n.t('home.myaccount')">
-            <i class="far fa-user fa-fw fa-inverse"></i>
+            <a class="btn btn-outline-secondary btn-round" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title=I18n.t('home.myaccount')>
+            <i class="far fa-user fa-fw"></i>
           </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to I18n.t('home.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
