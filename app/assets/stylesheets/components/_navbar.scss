@@ -24,7 +24,7 @@
 }
 
 .nav-taa {
-  margin-bottom: 1.2em;
+  margin-bottom: 0.5em;
   padding-bottom: 8px;
   font-family: 'Amatic sc';
   font-weight: 700;
@@ -45,5 +45,9 @@
   border-bottom: 2px solid $gray;
   color: $gray;
 
+}
+
+.nav-link {
+  padding-right: 0.5rem;
 }
 
