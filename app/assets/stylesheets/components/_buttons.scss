@@ -9,11 +9,17 @@
 }
 
 .btn-outline-secondary {
-  color: #777;
-  border-color: #777;
+  color: $jaune-taa;
+  border-color: $jaune-taa;
 }
 
 .btn-outline-secondary:hover {
   background-color: $or-taa;
   border-color: $or-taa;
+}
+
+.btn-login {
+  border-radius: 45px;
+  margin-left: 1.5rem;
+  font-size: 1.6em;
 }

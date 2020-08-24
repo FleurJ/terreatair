@@ -28,8 +28,8 @@
   padding-bottom: 8px;
   font-family: 'Amatic sc';
   font-weight: 700;
-  font-size: 1.4em;
-  text-shadow: 1px 1px 2px;
+  font-size: 2.0em;
+  text-shadow: 1px 0 0 #9E6C25;
 }
 
 .nav-fill .nav-taa {
@@ -38,7 +38,7 @@
 }
 
 .nav-taa a {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid transparent;
   letter-spacing: 3px;
 }
 
@@ -52,3 +52,6 @@
   padding-right: 0.5rem;
 }
 
+.shape-divider {
+  //background: linear-gradient(45deg, rgba(158, 108, 37,0.1), rgba(217, 175, 81, 0.1))
+}
