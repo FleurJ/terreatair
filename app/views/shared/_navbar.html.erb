@@ -1,31 +1,42 @@
-<div class="shape-divider">
-<div class="container">
-  <div class="nav nav-fill nav-taa">
-    <%= link_to I18n.t('home.poject'), "#6", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.animations'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.sponsorship'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.volunteering'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.companies'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.products'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.health'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.gallery'), "#", class: "nav-item nav-link" %>
-    <%= link_to I18n.t('home.contact'), "#", class: "nav-item nav-link" %>
-  </div>
-</div>
-</div>
-<div class="container">
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
-      <% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %>
+    <% end %>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to I18n.t('home.poject'), "#6", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.animations'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.sponsorship'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.volunteering'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.companies'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.products'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.health'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.gallery'), "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to I18n.t('home.contact'), "#", class: "nav-link" %>
+      </li>
         <li class="nav-item dropdown">
           <a class="btn btn-outline-secondary btn-round btn-locale" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Langue">
             <%= I18n.locale %>
@@ -37,24 +48,22 @@
             </div>
         </li>
         <% if user_signed_in? %>
-          <li class="nav-item">
-          </li>
           <li class="nav-item dropdown">
             <a class="btn btn-outline-secondary btn-round" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title=I18n.t('home.myaccount')>
-            <i class="fas fa-user fa-fw"></i>
-          </a>
+              <i class="fas fa-user fa-fw"></i>
+            </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to I18n.t('home.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
             <% if current_user.admin == true %>
-            <li class="nav-item dropdown">
-              <a href="#" class="btn btn-primary btn-round" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Admin">
-                <i class="fas fa-tools fa-fw fa-inverse"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Contenus", "/admin/contents", class: "dropdown-item" %>
-            </div>
-            </li>
+<!--               <li class="nav-item dropdown">
+                <a href="#" class="btn btn-primary btn-round" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Admin">
+                  <i class="fas fa-tools fa-fw fa-inverse"></i>
+                </a> -->
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <%= link_to "Contenus", "/admin/contents", class: "dropdown-item" %>
+                </div>
+              </li>
             <% end %>
           </li>
         <% else %>
@@ -64,9 +73,7 @@
             <% end %>
           </li>
         <% end %>
-      </ul>
-    </div>
+        </div>
+    </ul>
   </div>
 </div>
-
-

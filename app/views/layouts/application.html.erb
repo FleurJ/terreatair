@@ -12,12 +12,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.14/css/all.css">
   </head>
 
-  <body>
+  <body data-hijacking="off" data-animation="scaleDown">
 <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 320"><path fill="#9e6c25" fill-opacity="0.3" d="M0,32L720,160L1440,32L1440,0L720,0L0,0Z"></path></svg>
     -->
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+<!-- javascript -->
+<%= javascript_include_tag 'application' %>
+<%= javascript_pack_tag 'application' %>
+<script src="../javascript/packs/jquery-2.1.4.js"></script>
+<script src="../javascript/packs/elocity.min.js"></script>
+<script src="../javascript/packs/velocity.ui.min.js"></script>
+<script src="../javascript/packs/main.js"></script>
+<!-- end of javascript -->
   </body>
 </html>
