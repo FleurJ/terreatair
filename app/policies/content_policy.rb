@@ -6,7 +6,7 @@ class ContentPolicy < ApplicationPolicy
   end
 
   def admin?
-     user.admin == true
+    user.admin == true
   end
 
   def create?
@@ -30,6 +30,10 @@ class ContentPolicy < ApplicationPolicy
   end
 
   def home?
+    return true
+  end
+
+  def index
     return true
   end
 end

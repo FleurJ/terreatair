@@ -1,4 +1,6 @@
 class ContentsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
+
   def show
     @content = Content.friendly.find(params[:id])
     authorize @content
