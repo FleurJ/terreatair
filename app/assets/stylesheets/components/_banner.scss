@@ -1,0 +1,26 @@
+.home-banner {
+  background: image-url("home-banner.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+  filter: grayscale(1);
+}
+
+.home-banner-content {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40vh;
+}
+
+h1.headline {
+  color: white;
+  font-size: 7.0em;
+  text-shadow: 3px 6px 6px #777;
+  text-align: center;
+  margin: auto;
+}
