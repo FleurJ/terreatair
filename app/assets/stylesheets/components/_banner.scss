@@ -1,11 +1,11 @@
 .home-banner {
   background: image-url("home-banner.jpg");
   background-size: cover;
+  filter: grayscale(1);
   height: 100vh;
   color: #eee;
   text-align: center;
   padding-top: 40vh;
-  filter: grayscale(1);
 }
 
 .home-banner-content {
@@ -24,3 +24,49 @@ h1.headline {
   text-align: center;
   margin: auto;
 }
+
+.show-banner {
+  margin-top: 10rem;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .show-banner {
+    height: 40vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .show-banner {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .show-banner {
+    height: 20vh;
+  }
+}
+
+
+.container .content-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 10rem;
+  width: 60%;
+  margin: inherit auto;
+}
+
+.topic-banner {
+  height: 40vh;
+  // position: fixed;
+  filter: grayscale(1);
+  overflow: hidden;
+}
+
+.topic-banner img {
+  width: 100%;
+}
+
+
