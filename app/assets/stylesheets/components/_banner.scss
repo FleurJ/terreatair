@@ -25,29 +25,19 @@ h1.headline {
   margin: auto;
 }
 
+// MOBILE FIRST
 .show-banner {
   margin-top: 10rem;
   background-size: cover;
   margin-bottom: 2rem;
+  height: 20vh;
 }
 
-@media only screen and (min-width: 992px) {
+@media (min-width: 768px) {
   .show-banner {
     height: 40vh;
   }
 }
-@media only screen and (min-width: 768px) {
-  .show-banner {
-    height: 40vh;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-    .show-banner {
-    height: 20vh;
-  }
-}
-
 
 .container .content-title {
   position: absolute;
@@ -62,7 +52,6 @@ h1.headline {
   height: 40vh;
   // position: fixed;
   filter: grayscale(1);
-  overflow: hidden;
 }
 
 .topic-banner img {
