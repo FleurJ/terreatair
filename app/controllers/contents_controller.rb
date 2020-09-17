@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def show
     @content = Content.friendly.find(params[:id])
@@ -50,6 +50,6 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :tags, :order, :menu_title)
+    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :tags, :order)
   end
 end
