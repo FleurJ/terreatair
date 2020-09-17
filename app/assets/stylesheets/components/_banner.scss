@@ -57,3 +57,16 @@ h1.headline {
   width: 60%;
   margin: inherit auto;
 }
+
+.topic-banner {
+  height: 40vh;
+  // position: fixed;
+  filter: grayscale(1);
+  overflow: hidden;
+}
+
+.topic-banner img {
+  width: 100%;
+}
+
+
