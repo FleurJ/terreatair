@@ -49,9 +49,10 @@ h1.headline {
 }
 
 .topic-banner {
-  height: 40vh;
+  height: 100vh;
   // position: fixed;
   filter: grayscale(1);
+  overflow: hidden;
 }
 
 .topic-banner img {

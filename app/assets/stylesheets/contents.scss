@@ -13,24 +13,21 @@
   top : 0px;
   left: 0px;
   z-index: 1;
-  width: 500px;
-  width: 500px;
+  width: 700px;
 }
 
 .img-hexagone img {
-  width: 500px;
-  width: 500px;
+  width: 100%;
 }
 
 .img-custom {
-  width: 500px;
-  width: 500px;
+  width: 680px;
+  height: 700px;
+  overflow: hidden;
 }
 
 .img-custom img {
   object-fit: cover;
-  height: 480px;
-  width: 480px;
 }
 
 .grayscale {
