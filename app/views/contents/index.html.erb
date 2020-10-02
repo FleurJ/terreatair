@@ -77,29 +77,6 @@
     </div>
     <% end %>
     <% if c.order == 4 %>
-    <div id="volontariat" class="topic">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-4">
-          <h1><%= c.title %></h1>
-            <p class="home">
-              <%= c.teaser %> &nbsp; <%= link_to "+", content_path(c.id), class:"lire-plus" %>
-            </p>
-        </div>
-        <div class="col-6 img-parent">
-          <div class="img-custom">
-            <div class="grayscale">
-              <%= cl_image_tag c.image.key %>
-            </div>
-          </div>
-            <div class="img-hexagone"><img src="<%= image_url("masque-hexagone.png") %>"></div>
-        </div>
-      </div>
-    </div>
-    <div class="topic-banner">
-      <%= cl_image_tag c.image.key %>
-    </div>
-    <% end %>
-    <% if c.order == 5 %>
     <div id="entreprises" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">
@@ -122,7 +99,7 @@
       <%= cl_image_tag c.image.key %>
     </div>
     <% end %>
-    <% if c.order == 6 %>
+    <% if c.order == 5 %>
     <div id="produits" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">
@@ -165,7 +142,7 @@
       <%= cl_image_tag c.image.key %>
     </div>
     <% end %>
-    <% if c.order == 7 %>
+    <% if c.order == 6 %>
     <div id="bien-etre" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">
@@ -188,8 +165,8 @@
       <%= cl_image_tag c.image.key %>
     </div>
     <% end %>
-    <% if c.order == 8 %>
-    <div id="animations" class="topic">
+    <% if c.order == 7 %>
+    <div id="volontariat" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">
           <h1><%= c.title %></h1>
@@ -211,7 +188,7 @@
       <%= cl_image_tag c.image.key %>
     </div>
     <% end %>
-    <% if c.order == 9 %>
+    <% if c.order == 8 %>
     <div id="galerie" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">
@@ -234,7 +211,7 @@
       <%= cl_image_tag c.image.key %>
     </div>
     <% end %>
-    <% if c.order == 10 %>
+    <% if c.order == 9 %>
     <div id="contact" class="topic">
       <div class="row align-items-center justify-content-between">
         <div class="col-4">

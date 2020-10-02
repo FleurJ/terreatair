@@ -2,6 +2,7 @@
   <h1 class="title-admin">Modifier : <i><%= @content.title %></i></h1>
   <hr>
   <%= simple_form_for @content, url: content_path, method: :patch do |c| %>
+    <%= c.input :tags, label: 'Rubrique', collection: ['Sans rubrique', 'Accueil', 'Projet', 'Animations', 'Parrainage', 'Entreprises', 'Produits', 'Bien-être', 'Volontariat'] %>
     <%= c.input :title, label: 'Titre' %>
     <div class="hidden-field">
       <%= c.input :status, label: 'Statut', collection: ['draft', 'published', 'archived'], id: 'status', default:'draft' %>
@@ -9,7 +10,6 @@
     <%= c.input :teaser, label: 'Teaser' %>
     <%= c.input :body, label:'Corps de texte' %>
     <%= c.input :links, label: 'Liens' %>
-    <%= c.input :tags, label: 'Rubrique', collection: ['Accueil', 'Bien-être'] %>
     <%= c.input :image, as: :file, label: 'Image' %>
     <%= c.input :order, label: "Ordre en page d'accueil" %>
     <div class="row article-actions">

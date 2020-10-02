@@ -1,6 +1,6 @@
 class Content < ApplicationRecord
   ALLOWED_STATUSES = %w[draft published archived].freeze
-  ALLOWED_TAGS = %w[Accueil blog unreferenced Bien-être].freeze
+  ALLOWED_TAGS = %w[Accueil Projet Animations Parrainage Entreprises Produits Bien-être Volontariat 'Sans rubrique'].freeze
 
   belongs_to :user
 
