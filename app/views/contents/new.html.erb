@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container margin-top">
   <h1>Créer un nouveau contenu</h1>
   <%= simple_form_for @content, url: contents_path do |c| %>
   <%= c.input :title, label: 'Titre' %>
@@ -6,7 +6,7 @@
   <%= c.input :teaser, label: 'Teaser' %>
   <%= c.input :body, label:'Corps de texte' %>
   <%= c.input :links, label: 'Liens' %>
-  <%= c.input :tags, label: 'Rubrique', collection: ['Accueil', 'Bien-etre'] %>
+  <%= c.input :tags, label: 'Rubrique', collection: ['Accueil', 'Bien-être'] %>
   <%= c.input :image, as: :file, label: 'Image' %>
   <%= c.input :order, as: :integer, label: "Ordre en page d'accueil" %>
   <%= c.submit "Créer" %>
