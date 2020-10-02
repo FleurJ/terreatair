@@ -6,7 +6,7 @@
   <%= c.input :teaser, label: 'Teaser' %>
   <%= c.input :body, label:'Corps de texte' %>
   <%= c.input :links, label: 'Liens' %>
-  <%= c.input :tags, label: 'Tags', collection: ['home', 'blog', 'unreferenced'] %>
+  <%= c.input :tags, label: 'Rubrique', collection: ['Accueil', 'Bien-etre'] %>
   <%= c.input :image, as: :file, label: 'Image' %>
   <%= c.input :order, as: :integer, label: "Ordre en page d'accueil" %>
   <%= c.submit "Créer" %>
