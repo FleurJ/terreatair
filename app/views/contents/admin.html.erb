@@ -1,6 +1,9 @@
 <div class="container margin-top">
   <h1 class="title-admin">Gestion des contenus</h1>
   <hr>
+    <div>
+      <%= link_to 'Ajouter un contenu', new_content_path, class:'btn btn-primary' %>
+    </div>
     <% @content.each do |c| %>
       <div class="row admin-row">
         <div class="col-1">
