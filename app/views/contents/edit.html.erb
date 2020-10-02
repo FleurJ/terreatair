@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container margin-top">
   <h1 class="title-admin">Modifier : <i><%= @content.title %></i></h1>
   <hr>
   <%= simple_form_for @content, url: content_path, method: :patch do |c| %>
@@ -9,7 +9,7 @@
     <%= c.input :teaser, label: 'Teaser' %>
     <%= c.input :body, label:'Corps de texte' %>
     <%= c.input :links, label: 'Liens' %>
-    <%= c.input :tags, label: 'Tags', collection: ['home', 'blog', 'unreferenced'] %>
+    <%= c.input :tags, label: 'Rubrique', collection: ['Accueil', 'Bien-être'] %>
     <%= c.input :image, as: :file, label: 'Image' %>
     <%= c.input :order, label: "Ordre en page d'accueil" %>
     <div class="row article-actions">
