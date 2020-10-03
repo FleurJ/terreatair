@@ -49,6 +49,10 @@ class ContentsController < ApplicationController
     authorize @content
   end
 
+  def related_content
+    @contents = Content.where(status: "published")
+  end
+
   private
 
   def content_params

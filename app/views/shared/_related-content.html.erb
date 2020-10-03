@@ -1,0 +1,5 @@
+<% @contents.each do |c| %>
+  <% if c.tags == current_page(params: tags) %>
+  <%= c.title %>
+  <% end %>
+<% end %>
