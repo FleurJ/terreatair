@@ -38,7 +38,7 @@ class ContentsController < ApplicationController
   end
 
   def index
-    @contents = policy_scope(Content).where(status: "published", tags: 'home').order(:order)
+    @contents = policy_scope(Content).where(status: "published", tags: 'Accueil').order(:order)
   end
 
   def admin
