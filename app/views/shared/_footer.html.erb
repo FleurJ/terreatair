@@ -1,0 +1,22 @@
+<div class="footer fixed-bottom">
+  <div class="footer-links">
+    <a href="https://www.instagram.com/terreatair" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/Terreatair.be" target="_blank"><i class="fab fa-facebook"></i></a>
+    <%= link_to I18n.t('mentions-legales'), "/contents/mentions-legales"%>
+  </div>
+  <div class="footer-copyright">
+    <% if user_signed_in? %>
+      <% if current_user.admin == true %>
+        <div class="footer-links">
+          <%= link_to "Admin", "/admin/contents" %>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete%>
+        </div>
+      <% end %>
+      <% else %>
+      <li class="footer-links">
+        <%= link_to new_user_session_path do %>
+          <i class="far fa-user fa-fw"></i>
+        <% end %>
+      <% end %>
+  </div>
+</div>

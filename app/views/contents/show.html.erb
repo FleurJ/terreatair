@@ -10,7 +10,7 @@
 <!--   <p><%= @content.status %></p> -->
 <!--   <p><%= cl_image_tag @content.image.key %></p> -->
   <p class="teaser"><%= @content.teaser %></p>
-  <p><%= @content.body %></p>
+  <p><%= simple_format(@content.body.html_safe) %></p>
   <p><%= @content.links %></p>
 <!--   <p>Ecrit par <i><%= @content.user.firstname %></i>, le <%= @content.created_at %></p> -->
 </div>
