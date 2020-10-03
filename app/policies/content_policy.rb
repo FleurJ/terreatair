@@ -36,4 +36,8 @@ class ContentPolicy < ApplicationPolicy
   def index
     return true
   end
+
+  def destroy?
+    user.admin == true
+  end
 end

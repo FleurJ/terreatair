@@ -1,16 +1,21 @@
-<div class="container margin-top">
-  <h1 class="title-admin">Gestion des contenus</h1>
-  <hr>
-    <div>
-      <%= link_to 'Ajouter un contenu', new_content_path, class:'btn btn-primary' %>
+<div class="container margin-top admin">
+  <div class="row">
+    <div class="col-8">
+      <h1 class="title-admin">Gestion des contenus</h1>
     </div>
+    <div class="col-4">
+      <%= link_to 'Ajouter un contenu', new_content_path, class:'btn btn-primary btn-right' %>
+    </div>
+  </div>
+  <hr>
+
     <% @content.each do |c| %>
       <div class="row admin-row">
-        <div class="col-1">
+        <div class="col-2">
           <small><%= c.created_at.strftime("%d.%m.%Y") %></small>
         </div>
         <div class="col-4">
-          <%= c.title %>
+          <%= link_to c.title, content_path(c.id) %>
         </div>
         <div class="col-2">
           <%= c.status %>
@@ -24,9 +29,10 @@
         <% end %>
       </div>
       <div class="col-1">
-        <%= link_to "#", title:"Supprimer" do %>
-          <i class="fas fa-trash-alt fa-fw"></i>
-        <% end %>
+              <%= button_to "Supprimer", content_path(c.id),
+                  method: :delete,
+                  data: { confirm: "Veuillez confirmer la suppression !" },
+                 :id => "delete", class:"btn btn-danger" %>
       </div>
       </div>
     <% end %>
