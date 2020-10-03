@@ -33,8 +33,10 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-    @content = Content.find(params[:id])
+    @content = Content.friendly.find(params[:id])
     @content.destroy
+    authorize @content
+    redirect_to root_path
   end
 
   def index
@@ -42,7 +44,7 @@ class ContentsController < ApplicationController
   end
 
   def admin
-    @content = Content.all
+    @content = Content.all.order(:order)
 
     authorize @content
   end
