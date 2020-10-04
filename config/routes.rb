@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :contents
     resources :users
     resources :tags
+    resources :pages
     get '/admin/contents', to: 'contents#admin'
+    get '/admin', to: 'pages#admin'
   end
 
 

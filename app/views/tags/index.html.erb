@@ -1,15 +1,36 @@
 <div class="container margin-top">
-  <h1> Liste des rubriques </h1>
+  <div class="row align-items-center justify-content-between">
+    <div class="col-8">
+      <h1 class="title-admin">Gestion des rubriques</h1>
+    </div>
+    <div class="col-4">
+      <%= link_to 'Ajouter une rubrique', new_tag_path, class:'btn btn-primary btn-right' %>
+    </div>
+  </div>
   <hr>
+    <div class="row align-items-center justify-content-between admin-row">
+      <div class="col">
+        <h4>Rubrique</h4>
+      </div>
+      <div class="col-6">
+        <h4>Description</h4>
+      </div>
+      <div class="col">
+        <h4>Actions</h4>
+      </div>
+    </div>
   <% @tags.each do |t| %>
     <div class="row admin-row">
-      <div class="col-6">
-        <%= t.title %>
+      <div class="col">
+        <b><%= t.title %></b>
       </div>
-      <div class="col-2">
+      <div class="col-6 txt-light">
+        <%= t.description %>
+      </div>
+      <div class="col">
         <%= link_to "Modifier", edit_tag_path(t.id), class: "btn btn-primary" %>
       </div>
-      <div class="col-1">
+      <div class="col">
         <%= button_to "Supprimer", tag_path(t.id),
                       method: :delete,
                       data: { confirm: "Veuillez confirmer la suppression !" },

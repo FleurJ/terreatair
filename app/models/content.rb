@@ -6,6 +6,8 @@ class Content < ApplicationRecord
 
   has_one_attached :image
   has_many_attached :file
+  has_many :content_tag, dependent: :destroy
+  has_many :tags, through: :content_tag
 
   validates :title, presence: true
   validates :status, presence: true, inclusion: { in: ALLOWED_STATUSES,

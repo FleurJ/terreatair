@@ -3,11 +3,15 @@ class ContentsController < ApplicationController
 
   def show
     @content = Content.friendly.find(params[:id])
+    @tags = @content.tags
     authorize @content
+    authorize @tags
   end
 
   def new
     @content = Content.new
+    @tags = Tag.all
+    authorize @tags
     authorize @content
   end
 
@@ -22,6 +26,8 @@ class ContentsController < ApplicationController
 
   def edit
     @content = Content.find(params[:id])
+    @tags = Tag.all
+    authorize @tags
     authorize @content
   end
 
@@ -40,18 +46,18 @@ class ContentsController < ApplicationController
   end
 
   def index
-    @contents = policy_scope(Content).where(status: "published", tags: 'Accueil').order(:order)
+    @contents = policy_scope(Content).where(status: "published").order(:order)
   end
 
   def admin
     @content = Content.all.order(:order)
-
+    @tags = Tag.all
     authorize @content
   end
 
   private
 
   def content_params
-    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :tags, :order)
+    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :order, tag_ids: [])
   end
 end
