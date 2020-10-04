@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     root to: 'contents#index'
     resources :contents
     resources :users
+    resources :tags
     get '/admin/contents', to: 'contents#admin'
   end
 

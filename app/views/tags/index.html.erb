@@ -1,0 +1,20 @@
+<div class="container margin-top">
+  <h1> Liste des rubriques </h1>
+  <hr>
+  <% @tags.each do |t| %>
+    <div class="row admin-row">
+      <div class="col-6">
+        <%= t.title %>
+      </div>
+      <div class="col-2">
+        <%= link_to "Modifier", edit_tag_path(t.id), class: "btn btn-primary" %>
+      </div>
+      <div class="col-1">
+        <%= button_to "Supprimer", tag_path(t.id),
+                      method: :delete,
+                      data: { confirm: "Veuillez confirmer la suppression !" },
+                      :id => "delete", class:"btn btn-danger" %>
+      </div>
+    </div>
+  <% end %>
+</div>
