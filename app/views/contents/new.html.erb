@@ -2,12 +2,12 @@
   <h1>Créer un nouveau contenu</h1>
   <hr>
   <%= simple_form_for @content, url: contents_path do |c| %>
-  <%= c.input :tags, label: 'Rubrique', collection: ['Sans rubrique', 'Accueil', 'Projet', 'Animations', 'Parrainage', 'Entreprises', 'Produits', 'Bien-être', 'Volontariat'], default:'Sans rubrique' %>
   <%= c.input :title, label: 'Titre' %>
   <%= c.input :teaser, label: 'Teaser' %>
   <%= c.input :body, label:'Corps de texte' %>
   <%= c.input :links, label: 'Liens' %>
-  <%= c.input :image, as: :file, label: 'Image' %>
+  <%= c.input :image, as: :file, label: 'Image pour le format "banner"' %>
+  <%= c.input :image800x800, as: :file, label: 'Image pour le format carré' %>
   <%= c.input :order, as: :integer, label: "Ordre en page d'accueil" %>
   <%= c.input :status, label: 'Statut', collection: ['draft', 'published', 'archived'], default:'published' %>
   <%= c.submit "Créer" %>

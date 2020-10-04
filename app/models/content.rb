@@ -5,6 +5,7 @@ class Content < ApplicationRecord
   belongs_to :user
 
   has_one_attached :image
+  has_one_attached :image800x800
   has_many_attached :file
 
   validates :title, presence: true
