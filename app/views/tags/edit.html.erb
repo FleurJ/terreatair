@@ -1,0 +1,9 @@
+<div class="container margin-top">
+  <h1>Créer une catégorie</h1>
+  <hr>
+  <%= simple_form_for @tag, url: tags_path, method: :patch do |c| %>
+  <%= c.input :title, label: 'Titre' %>
+  <%= c.input :description, label: 'Description' %>
+  <%= c.submit "Enregistrer", class: "btn btn-primary" %>
+  <% end %>
+</div>
