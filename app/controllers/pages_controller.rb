@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def admin
+  end
+
+  def show
+  end
 end

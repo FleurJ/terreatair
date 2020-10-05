@@ -8,7 +8,7 @@
     <% if user_signed_in? %>
       <% if current_user.admin == true %>
         <div class="footer-links">
-          <%= link_to "Admin", "/admin/contents" %>
+          <%= link_to "Admin", "/admin" %>
           <%= link_to "Déconnexion", destroy_user_session_path, method: :delete%>
         </div>
       <% end %>
