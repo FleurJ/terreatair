@@ -17,16 +17,17 @@ class TagsController < ApplicationController
   end
 
   def edit
+    authorize @tag
   end
 
   def update
-    @tag.update(tag_params) if authorised_user
+    @tag.update(tag_params)
     authorize @tag
     redirect_to tags_path
   end
 
   def destroy
-    @tag.destroy if authorised_user
+    @tag.destroy
     authorize @tag
     redirect_to tags_path
   end
