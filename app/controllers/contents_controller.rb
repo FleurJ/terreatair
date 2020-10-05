@@ -8,6 +8,7 @@ class ContentsController < ApplicationController
 
   def new
     @content = Content.new
+    @tags = Tag.all
     authorize @content
   end
 
@@ -21,6 +22,7 @@ class ContentsController < ApplicationController
   end
 
   def edit
+    @tags = Tag.all
     @content = Content.find(params[:id])
     authorize @content
   end
@@ -52,6 +54,6 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :image800x800, :order)
+    params.require(:content).permit(:title, :status, :teaser, :body, :links, :image, :image800x800, :order, tag_ids: [])
   end
 end
