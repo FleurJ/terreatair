@@ -51,6 +51,11 @@ class ContentsController < ApplicationController
     authorize @content
   end
 
+  def related_contents
+    @content = Content.find(params[:id])
+    @related_tags = @content.tags
+  end
+
   private
 
   def content_params
