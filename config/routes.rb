@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :tags
     get '/admin', to: 'pages#admin'
     get '/admin/contents', to: 'contents#admin'
+    get '/mentions-legales', to: '/contents/16'
   end
 
 

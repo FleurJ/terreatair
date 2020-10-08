@@ -13,7 +13,7 @@
   top : 0px;
   left: 0px;
   z-index: 1;
-  width: 700px;
+  width: 650px;
 }
 
 .img-hexagone img {
@@ -21,13 +21,14 @@
 }
 
 .img-custom {
-  width: 680px;
-  height: 700px;
+  width: 615px;
+  height: 650px;
   overflow: hidden;
 }
 
 .img-custom img {
   object-fit: cover;
+  overflow: hidden;
 }
 
 .grayscale {

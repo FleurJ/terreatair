@@ -8,3 +8,12 @@ p a:hover {
   border-bottom: 2px solid $gray;
   text-decoration: none;
 }
+
+a.lire-plus {
+  text-decoration: underline;
+  display: block;
+  &:hover {
+    border-bottom: 0px;
+    text-decoration: double;
+  }
+}
